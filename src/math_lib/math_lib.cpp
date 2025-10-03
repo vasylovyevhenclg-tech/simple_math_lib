@@ -44,3 +44,4 @@ namespace MathLib
 	}
 }
 
+int factorial(int n);

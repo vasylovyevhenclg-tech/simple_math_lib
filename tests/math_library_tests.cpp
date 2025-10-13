@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <fstream>
 #include "math_lib.h"
+#include <vector>
 
 class MathLibTestFixture : public ::testing::Test
 {
@@ -83,3 +84,18 @@ TEST(MathLibraryTest, FactorialTest) {
     EXPECT_EQ(factorial(5), 120);
     EXPECT_EQ(factorial(3), 6);
 }
+
+TEST(MathLibraryTest, MedianTest) {
+    std::vector<int> nums1 = {1, 3, 2};
+    EXPECT_DOUBLE_EQ(median(nums1), 2.0);
+
+    std::vector<int> nums2 = {1, 2, 3, 4};
+    EXPECT_DOUBLE_EQ(median(nums2), 2.5);
+
+    std::vector<int> nums3 = {5};
+    EXPECT_DOUBLE_EQ(median(nums3), 5.0);
+
+    std::vector<int> nums4 = {};
+    EXPECT_DOUBLE_EQ(median(nums4), 0.0);
+}
+

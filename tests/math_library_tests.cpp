@@ -99,3 +99,7 @@ TEST(MathLibraryTest, MedianTest) {
     EXPECT_DOUBLE_EQ(median(nums4), 0.0);
 }
 
+TEST(MathLibraryTest, MedianWithEvenCount) {
+    std::vector<int> nums = {2, 4, 6, 8};
+    EXPECT_DOUBLE_EQ(median(nums), 5);
+}

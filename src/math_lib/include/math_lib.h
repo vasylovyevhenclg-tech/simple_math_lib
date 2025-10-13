@@ -72,3 +72,10 @@ namespace MathLib
 }
 
 int factorial(int n);
+
+#pragma once
+#include <vector>
+
+// Функція для обчислення медіани масиву чисел
+// Якщо масив порожній — повертає 0
+double median(std::vector<int> numbers);

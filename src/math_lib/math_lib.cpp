@@ -52,9 +52,6 @@ int factorial(int n) {
     return result;
 }
 
-#include "math_lib.h"
-#include <algorithm>
-
 double median(std::vector<int> numbers) {
     if (numbers.empty()) return 0.0; 
 

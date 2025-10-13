@@ -45,9 +45,26 @@ namespace MathLib
 }
 
 int factorial(int n) {
-    if (n < 0) return -1; // помилка
+    if (n < 0) return -1; 
     int result = 1;
     for (int i = 1; i <= n; i++)
         result *= i;
     return result;
 }
+
+#include "math_lib.h"
+#include <algorithm>
+
+double median(std::vector<int> numbers) {
+    if (numbers.empty()) return 0.0; 
+
+    std::sort(numbers.begin(), numbers.end()); 
+    size_t n = numbers.size();
+
+    if (n % 2 == 0) {
+        return (numbers[n/2 - 1] + numbers[n/2]) / 2.0;
+    } else {
+        return numbers[n/2];
+    }
+}
+

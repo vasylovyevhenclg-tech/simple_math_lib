@@ -103,3 +103,11 @@ TEST(MathLibraryTest, MedianWithEvenCount) {
     std::vector<int> nums = {2, 4, 6, 8};
     EXPECT_DOUBLE_EQ(median(nums), 5);
 }
+
+TEST_F(MathLibTestFixture, FindThirdAngle)
+{
+    EXPECT_EQ(MathLib::findThirdAngle(90, 30), 60);
+    EXPECT_EQ(MathLib::findThirdAngle(30, 50), 100);
+    EXPECT_THROW(MathLib::findThirdAngle(0, 100), std::invalid_argument);
+    EXPECT_THROW(MathLib::findThirdAngle(100, 80), std::invalid_argument);
+}

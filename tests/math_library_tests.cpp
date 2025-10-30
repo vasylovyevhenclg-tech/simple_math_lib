@@ -4,24 +4,6 @@
 #include "math_lib.h"
 #include <vector>
 
-int main() {
-    // Перевірка правильних значень
-    assert(findThirdAngle(60, 60) == 60);
-    assert(findThirdAngle(90, 45) == 45);
-
-    // Перевірка помилкових випадків
-    try {
-        findThirdAngle(100, 100);
-        std::cerr << "Test failed: expected exception for invalid angles\n";
-        return 1;
-    } catch (const std::invalid_argument&) {
-        std::cout << "Invalid angle test passed!\n";
-    }
-
-    std::cout << "All tests passed!\n";
-    return 0;
-}
-
 class MathLibTestFixture : public ::testing::Test
 {
 protected:

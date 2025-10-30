@@ -75,3 +75,6 @@ namespace MathLib
 int factorial(int n);
 
 double median(std::vector<int> numbers);
+
+int findThirdAngle(int angle1, int angle2);
+

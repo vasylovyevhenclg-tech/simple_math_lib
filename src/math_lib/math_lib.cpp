@@ -52,6 +52,13 @@ int factorial(int n) {
     return result;
 }
 
+int findThirdAngle(int angle1, int angle2)
+{
+    if (angle1 <= 0 || angle2 <= 0 || angle1 + angle2 >= 180)
+        throw std::invalid_argument("Invalid angles.");
+    return 180 - (angle1 + angle2);
+}
+
 double median(std::vector<int> numbers) {
     if (numbers.empty()) return 0.0; 
 
